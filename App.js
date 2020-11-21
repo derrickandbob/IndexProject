@@ -10,6 +10,8 @@ let result = document.querySelector("#result")
 // Disables all numbers when clicked
 offButton.addEventListener("click",()=>{
     numbers.forEach(eachNumber=>{
+        printHistory("")
+        printOutput("")
         eachNumber.disabled = true;
     })
     operators.forEach(eachOperator=>{
