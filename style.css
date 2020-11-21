@@ -96,7 +96,7 @@ h6{
 }
 body{
     font-family: 'Courier New', Courier, monospace;
-    background-image: linear-gradient(to left, rgb(52, 16, 16), maroon,rgb(44, 7, 7));  
+    background-image: radial-gradient(to left, rgb(52, 16, 16), maroon,rgb(44, 7, 7));  
 }
  a{
      color: darkolivegreen;

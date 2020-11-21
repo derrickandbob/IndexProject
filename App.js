@@ -54,18 +54,20 @@ function displayOutput(num){
         document.getElementById("output-value").innerText = num;
     }
     else{
-        document.getElementById("output-value").innerText = getFormattedNumber(num);
+        document.getElementById("output-value").innerText = FormattedNumber(num);
     }
 }
-function getFormattedNumber(num){
+
+//Brings comma to the values when necessary
+function FormattedNumber(num){
     if(num =="-"){
         return ""
     }
-    let n = Number(num);
-    let value = n.toLocaleString("en")
+    let convertedNumber = Number(num);
+    let value = convertedNumber.toLocaleString("en")
     return value
 }
-function reverseNumberFormat(num){
+function reverseNumber(num){
     return Number(num.replace(/,/g,''))
 }
 let operator = document.getElementsByClassName("operator")
@@ -76,7 +78,7 @@ for(let i=0; i<operator.length; i++){
             displayOutput("")
         }
         if(this.id == "backspace"){
-            let outputValue = reverseNumberFormat(getOutput()).toString();
+            let outputValue = reverseNumber(getOutput()).toString();
             if(outputValue){
                 outputValue = outputValue.substr(0,outputValue.length-1)
                 displayOutput(outputValue)
@@ -91,7 +93,7 @@ for(let i=0; i<operator.length; i++){
                 }
             }
             if(outputValue!="" || previousData!=""){
-                outputValue = outputValue==""? outputValue:reverseNumberFormat(outputValue)
+                outputValue = outputValue==""? outputValue:reverseNumber(outputValue)
                 previousData = previousData + outputValue
                 if(this.id=="="){
                     let result = eval(previousData)
@@ -124,7 +126,7 @@ profile.addEventListener("click",function(){
 let number = document.getElementsByClassName("number")
 for(let i=0; i<number.length; i++){
     number[i].addEventListener("click",function(){
-        let outputValue = reverseNumberFormat(getOutput())
+        let outputValue = reverseNumber(getOutput())
         if(outputValue!=NaN){
             outputValue = outputValue + this.id
             displayOutput(outputValue)
