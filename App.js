@@ -10,8 +10,8 @@ let result = document.querySelector("#result")
 // Disables all numbers when clicked
 offButton.addEventListener("click",()=>{
     numbers.forEach(eachNumber=>{
-        printHistory("")
-        printOutput("")
+        displayUserInput("")
+        displayOutput("")
         eachNumber.disabled = true;
     })
     operators.forEach(eachOperator=>{
@@ -40,16 +40,16 @@ onButton.addEventListener("click",()=>{
 })
 
 // Functions
-function getHistory(){
-    return document.getElementById("history-value").innerText;
+function getUserInput(){
+    return document.getElementById("previousData-value").innerText;
 }
-function printHistory(num){
-    return document.getElementById("history-value").innerText=num;
+function displayUserInput(num){
+    return document.getElementById("previousData-value").innerText=num;
 }
 function getOutput(){
     return document.getElementById("output-value").innerText;
 }
-function printOutput(num){
+function displayOutput(num){
     if(num==""){
         document.getElementById("output-value").innerText = num;
     }
@@ -72,36 +72,36 @@ let operator = document.getElementsByClassName("operator")
 for(let i=0; i<operator.length; i++){
     operator[i].addEventListener("click",function(){
         if(this.id == "clear"){
-            printHistory("")
-            printOutput("")
+            displayUserInput("")
+            displayOutput("")
         }
         if(this.id == "backspace"){
-            let output = reverseNumberFormat(getOutput()).toString();
-            if(output){
-                output = output.substr(0,output.length-1)
-                printOutput(output)
+            let outputValue = reverseNumberFormat(getOutput()).toString();
+            if(outputValue){
+                outputValue = outputValue.substr(0,outputValue.length-1)
+                displayOutput(outputValue)
             }
         }
         else{
-            let output = getOutput()
-            let history = getHistory()
-            if(output==""&&history!=""){
-                if(isNaN(history[history.length-1])){
-                    history = history.substr(0,history.length-1)
+            let outputValue = getOutput()
+            let previousData = getUserInput()
+            if(outputValue==""&&previousData!=""){
+                if(isNaN(previousData[previousData.length-1])){
+                    previousData = previousData.substr(0,previousData.length-1)
                 }
             }
-            if(output!="" || history!=""){
-                output = output==""? output:reverseNumberFormat(output)
-                history = history + output
+            if(outputValue!="" || previousData!=""){
+                outputValue = outputValue==""? outputValue:reverseNumberFormat(outputValue)
+                previousData = previousData + outputValue
                 if(this.id=="="){
-                    let result = eval(history)
-                    printOutput(result)
-                    printHistory("")
+                    let result = eval(previousData)
+                    displayOutput(result)
+                    displayUserInput("")
                 }
                 else{
-                    history = history + this.id
-                    printHistory(history)
-                    printOutput("")
+                    previousData = previousData + this.id
+                    displayUserInput(previousData)
+                    displayOutput("")
                 }
             }
         }
@@ -120,14 +120,14 @@ profile.addEventListener("click",function(){
     })
 })
 
-// Prints output on screen
+// Prints outputValue on screen
 let number = document.getElementsByClassName("number")
 for(let i=0; i<number.length; i++){
     number[i].addEventListener("click",function(){
-        let output = reverseNumberFormat(getOutput())
-        if(output!=NaN){
-            output = output + this.id
-            printOutput(output)
+        let outputValue = reverseNumberFormat(getOutput())
+        if(outputValue!=NaN){
+            outputValue = outputValue + this.id
+            displayOutput(outputValue)
         }
     })
 }
