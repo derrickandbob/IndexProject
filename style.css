@@ -4,14 +4,14 @@
     justify-content: space-between;
 }
 body{
-    background-image:linear-gradient(#336,rgb(96, 96, 141));
+    background-image:radial-gradient(#999,#888,#777);
     
 }
 .contain{
     height: 560px;
     margin:30px auto;
     width: 330px;
-    background-color: black;
+    background-color: #333;
     border-radius: 20px;
 }
 
@@ -30,21 +30,27 @@ body{
     height: 500px;
     width:300px ;
     margin:20px auto;
-    margin-left: 30px;
-    
-    
+    margin-left: 30px;   
 }
-.numb{
+.numb, .operator, .powerOff , .powerOn, .clearBtn{
     height: 57px;
     width: 57px;
     margin-right: 10px;
     margin-top: 10px;
     border-radius: 8px;
     font-weight: bold;
-    
+    outline: none;
+}
+.numb:focus{
+    background-color: wheat;
+    border: none;
+    outline: none;
+}
+.powerOn{
+    font-size: 2,5rem;
 }
 
-#off{
+.powerOff{
     background-color: red;
     color: honeydew;
     outline: none;
@@ -54,20 +60,36 @@ body{
     color: honeydew;
     outline: none;
 }
+.clearBtn{
+    background-color: wheat;
+}
 #num{
     outline: none;
 }
 .answer{
     height: 57px;
-    width: 200px;
+    width: 130px;
     margin-right: 10px;
     margin-top: 10px;
     border-radius: 5px;
     background-color: green;
     color: honeydew;
 }
-h5{
+h6{
     text-align: center;
     padding-top: 15px;
     color: ivory;
+}
+.styleUserInput{
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 5px;
+}
+.styleOperator{
+    font-size: large;
+    color: green;
+    float: left;
+}
+.screenOff{
+    opacity: 0;
 }
