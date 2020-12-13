@@ -1,57 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css"></link>
-    <title>First Project</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Questions and Anwers</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='fontawesome-free-5.14.0-web/css/all.css'>
+    <link rel="stylesheet" type="text/css"  href="./css/bootstrap.css">
+    <link rel="stylesheet"  href="style.css">
+    
 </head>
+<script>
+    function toAnswer(){
+        document.getElementById("question1").innerHTML="criminal investigation department" 
+        document.getElementById("question1").style.color="yellow"
+    }
+    function toQuestion(){
+        document.getElementById("question1").innerHTML="What is the full meaning of CID?" 
+        document.getElementById("question1").style.color="white"
+    }
+ 
+    function tosecondAnswer(){
+        document.getElementById("question2").innerHTML="Niel Amstrong" 
+        document.getElementById("question2").style.color="black"
+    }
+    function tosecondQuestion(){
+        document.getElementById("question2").innerHTML="Who was the first person on earth to visit the moon?" 
+        document.getElementById("question2").style.color="black"
+    }
+    function tothirdAnswer(){
+        document.getElementById("question3").innerHTML="Bill Gate" 
+        document.getElementById("question3").style.color="yellow"
+    }
+    function tothirdQuestion(){
+        document.getElementById("question3").innerHTML="Who is the owner of the microsoft company?" 
+        document.getElementById("question3").style.color="white"
+    }
+    function toforthAnswer(){
+        document.getElementById("question4").innerHTML="Light" 
+        document.getElementById("question4").style.color="black"
+    }
+    function toforthQuestion(){
+        document.getElementById("question4").innerHTML="The word photo in Photosynthesis means ...?" 
+        document.getElementById("question4").style.color="black"
+    }
+    function tofifthAnswer(){
+        document.getElementById("question5").innerHTML="cannot be solved" 
+        document.getElementById("question5").style.color="yellow"
+    }
+    function tofifthQuestion(){
+        document.getElementById("question5").innerHTML="What is the value of any number divided by zero?" 
+        document.getElementById("question5").style.color="white"
+    }
+</script> 
 <body>
-    <div class="contain">
-        <div id="calculator">
-            <h6>DERRICK AND BOB TECH💻</h6>
-            <div id="result">
-                <div id="history">
-                    <div id="previousData-value"></div>
-                </div>
-                <div id="output">
-                    <p id="output-value"></p>
-                </div>
-            </div>
-            <div class="aboutUs">
-                <h3>FIRST PROJECT</h3>
-                This amazing calculator is the first project of two Engineers, Derrick and Bob.
-                They design responsive and user-friendly web applications for companies.
-                Derrick is a Mechanical Engineer, a software Engineer and a serious bassist. 
-                Bob is an Electrical Engineer, a software Engineer and feels comfortable playing piano.
-                They are freelancers too. Feel free to hit them up. They got you covered!
-                <a href="mailto:derrickandbobprojects@gmail.com">Contact us</a>
-            </div>
-            <div id="keyboard">
-                <button class="number" id="7">7</button>
-            <button class="number" id="8">8</button>
-            <button class="number" id="9">9</button>
-            <button class="powerOff" id="off"><i class="fa fa-power-off" aria-hidden="true"></i></button>
-            <button class="number" id="4">4</button>
-            <button class="number" id="5">5</button>
-            <button class="number" id="6">6</button>
-            <button class="powerOn" id="on">ON</button>
-            <button class="number" id="1">1</button>
-            <button class="number" id="2">2</button>
-            <button class="number" id="3">3</button>
-            <button class="operator" id="clear">AC</button>
-            <button class="operator" id="+">+</button>
-            <button class="number" id="0">0</button>
-            <button class="operator" id="/">/</button>
-            <button class="operator" id="backspace">CE</button>
-            <button class="operator" id="-">-</button>
-            <button class="operator" id="*">*</button>
-            <button class="operator" id="=">=</button>
-            <button class="profile" id="profile"><i class="fa fa-user" aria-hidden="true"></i></button>
-        </div>
-    </div>
-    </div>
-    <script src="App.js"></script>
+    
+ <div class="container">
+  <h1 class="big">KNOWLEDGE FORUM</h1>   
+  <h1>QUESTIONS AND ANSWERS</h1>
+ </div> 
+ <div class="containerone">
+     <p class="para1">You are welcome to this amazing website.This website
+          is made up of all forms of questions with their 
+          respective answers.Relax and enjoy  </p>
+ </div>
+ <div class="work">
+   <h2 id="head2">Question one</h2><hr/>
+   <p id="question1">What is the full meaning of CID?</p>
+   <button class="btn " id="butto" onclick="toAnswer()">Answer</button>
+   <button class="btn " id="butto-1" onclick="toQuestion()">Return</button>
+</div>
+<div class="work1">
+    <h2 id="head2">Question two</h2><hr/>
+    <p id="question2">Who was the first person on earth to visit the moon?</p>
+    <button class="btn " id="butto" onclick="tosecondAnswer()">Answer</button>
+    <button class="btn " id="butto-1" onclick="tosecondQuestion()">Return</button>
+ </div>
+ <div class="work">
+    <h2 id="head2">Question three</h2><hr/>
+    <p id="question3">Who is the owner of the microsoft company?</p>
+    <button class="btn " id="butto" onclick="tothirdAnswer()">Answer</button>
+    <button class="btn " id="butto-1" onclick="tothirdQuestion()">Return</button>
+ </div>
+ <div class="work1">
+    <h2 id="head2">Question four</h2><hr/>
+    <p id="question4">The word photo in Photosynthesis means ...?</p>
+    <button class="btn " id="butto" onclick="toforthAnswer()">Answer</button>
+    <button class="btn " id="butto-1" onclick="toforthQuestion()">Return</button>
+ </div>
+ <div class="work">
+    <h2 id="head2">Question five</h2><hr/>
+    <p id="question5">What is the value of any number divided by zero?</p>
+    <button class="btn " id="butto" onclick="tofifthAnswer()">Answer</button>
+    <button class="btn " id="butto-1" onclick="tofifthQuestion()">Return</button>
+ </div>
+ <a href="#"><button class="next" type="button">NEXT</button></a>
 </body>
-</html>
+</html> 
