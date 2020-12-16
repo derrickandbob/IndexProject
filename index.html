@@ -11,90 +11,140 @@
     <link rel="stylesheet"  href="style.css">
     
 </head>
-<script>
-    function toAnswer(){
-        document.getElementById("question1").innerHTML="criminal investigation department" 
-        document.getElementById("question1").style.color="yellow"
-    }
-    function toQuestion(){
-        document.getElementById("question1").innerHTML="What is the full meaning of CID?" 
-        document.getElementById("question1").style.color="white"
-    }
- 
-    function tosecondAnswer(){
-        document.getElementById("question2").innerHTML="Niel Amstrong" 
-        document.getElementById("question2").style.color="black"
-    }
-    function tosecondQuestion(){
-        document.getElementById("question2").innerHTML="Who was the first person on earth to visit the moon?" 
-        document.getElementById("question2").style.color="black"
-    }
-    function tothirdAnswer(){
-        document.getElementById("question3").innerHTML="Bill Gate" 
-        document.getElementById("question3").style.color="yellow"
-    }
-    function tothirdQuestion(){
-        document.getElementById("question3").innerHTML="Who is the owner of the microsoft company?" 
-        document.getElementById("question3").style.color="white"
-    }
-    function toforthAnswer(){
-        document.getElementById("question4").innerHTML="Light" 
-        document.getElementById("question4").style.color="black"
-    }
-    function toforthQuestion(){
-        document.getElementById("question4").innerHTML="The word photo in Photosynthesis means ...?" 
-        document.getElementById("question4").style.color="black"
-    }
-    function tofifthAnswer(){
-        document.getElementById("question5").innerHTML="cannot be solved" 
-        document.getElementById("question5").style.color="yellow"
-    }
-    function tofifthQuestion(){
-        document.getElementById("question5").innerHTML="What is the value of any number divided by zero?" 
-        document.getElementById("question5").style.color="white"
-    }
-</script> 
 <body>
-    
- <div class="container">
-  <h1 class="big">KNOWLEDGE FORUM</h1>   
-  <h1>QUESTIONS AND ANSWERS</h1>
- </div> 
- <div class="containerone">
-     <p class="para1">You are welcome to this amazing website.This website
-          is made up of all forms of questions with their 
-          respective answers.Relax and enjoy  </p>
- </div>
- <div class="work">
-   <h2 id="head2">Question one</h2><hr/>
-   <p id="question1">What is the full meaning of CID?</p>
-   <button class="btn " id="butto" onclick="toAnswer()">Answer</button>
-   <button class="btn " id="butto-1" onclick="toQuestion()">Return</button>
-</div>
-<div class="work1">
-    <h2 id="head2">Question two</h2><hr/>
-    <p id="question2">Who was the first person on earth to visit the moon?</p>
-    <button class="btn " id="butto" onclick="tosecondAnswer()">Answer</button>
-    <button class="btn " id="butto-1" onclick="tosecondQuestion()">Return</button>
- </div>
- <div class="work">
-    <h2 id="head2">Question three</h2><hr/>
-    <p id="question3">Who is the owner of the microsoft company?</p>
-    <button class="btn " id="butto" onclick="tothirdAnswer()">Answer</button>
-    <button class="btn " id="butto-1" onclick="tothirdQuestion()">Return</button>
- </div>
- <div class="work1">
-    <h2 id="head2">Question four</h2><hr/>
-    <p id="question4">The word photo in Photosynthesis means ...?</p>
-    <button class="btn " id="butto" onclick="toforthAnswer()">Answer</button>
-    <button class="btn " id="butto-1" onclick="toforthQuestion()">Return</button>
- </div>
- <div class="work">
-    <h2 id="head2">Question five</h2><hr/>
-    <p id="question5">What is the value of any number divided by zero?</p>
-    <button class="btn " id="butto" onclick="tofifthAnswer()">Answer</button>
-    <button class="btn " id="butto-1" onclick="tofifthQuestion()">Return</button>
- </div>
- <a href="#"><button class="next" type="button">NEXT</button></a>
+    <div class="container">
+     <h1 class="big">THE  INTELLIGENT</h1>   
+     <h2 class= "big">MACHINE </h2>
+    </div> 
+    <div class="containerone">
+        <p class="para1">You are welcome to this amazing website.This website
+             is made up of all forms of questions with their 
+             respective answers.Relax and enjoy  </p>
+    </div>
+    <section>
+        <div class="work">
+          <h6 id="head2">Question one</h6><hr/>
+          <p id="question1">What is the full meaning of CID?</p><hr/>
+          <button class="btn " id="button">
+           View Answer
+         </button>
+        </div>
+    </section>
+    <section>
+       <div class="work1">
+         <h6 id="head2">Question two</h6><hr/>
+         <p Who id="question2">Who was the first person on earth to visit the moon?</p><hr/>
+         <button class="btn " id="button2">
+          View Answer
+        </button>
+       </div>
+   </section>
+   <section>
+       <div class="work">
+         <h6 id="head2">Question three</h6><hr/>
+         <p id="question3">Who is the owner of the microsoft company?</p><hr/>
+         <button class="btn " id="button3">
+          View Answer
+        </button>
+       </div>
+   </section>
+   <section>
+       <div class="work1">
+         <h6 id="head2">Question four</h6><hr/>
+         <p id="question4">The word photo in photosynthesis means...?</p><hr/>
+         <button class="btn " id="button4">
+          View Answer
+        </button>
+       </div>
+   </section>
+   <section>
+       <div class="work">
+         <h6 id="head2">Question five</h6><hr/>
+         <p id="question5">What is the value of any number divided by zero?</p><hr/>
+         <button class="btn " id="button5">
+          View Answer
+        </button>
+       </div>
+   </section>
+    <a href="#"><button class="next" type="button">NEXT</button></a>
+   
+   
+    <script>
+       let button = document.getElementById("button");
+       let question = document.getElementById("question");
+   
+       button.onclick = function(){
+           if(this.textContent.includes("View Answer")){
+               this.textContent = "Back to Question"
+               question1.innerHTML = "Criminal Investigation Department"
+           
+           }else{
+               this.textContent = " View Answer"
+               question1.innerHTML = "What is the full meaning of CID?"
+           }
+       }
+   </script>
+   <script>
+   
+       let button2= document.getElementById("button2");
+       let question2 = document.getElementById("question2");
+   
+       button2.onclick = function(){
+           if(this.textContent.includes("View Answer")){
+               this.textContent = " Back to Question"
+               question2.innerHTML = "Niel Amstrong"
+           
+           }else{
+               this.textContent = " View Answer"
+               question2.innerHTML = "Who was the first person on earth to visit the moon?"
+           }
+       }
+   </script>
+   <script>
+       let button3 = document.getElementById("button3");
+       let question3 = document.getElementById("question3");
+   
+       button3.onclick = function(){
+           if(this.textContent.includes("View Answer")){
+               this.textContent = "Back to Question"
+               question3.innerHTML = "Bill Gate"
+           
+           }else{
+               this.textContent = " View Answer"
+               question3.innerHTML = "Who is the owner of the microsoft company?"
+           }
+       }
+       </script>
+       <script>
+           let button4 = document.getElementById("button4");
+           let question4 = document.getElementById("question4");
+       
+           button4.onclick = function(){
+               if(this.textContent.includes("View Answer")){
+                   this.textContent = "Back to Question"
+                   question4.innerHTML = "Light"
+               
+               }else{
+                   this.textContent = " View Answer"
+                   question4.innerHTML = "The word photo in photosynthesis means..?"
+               }
+           }
+        </script>
+        <script>
+   
+           let button5= document.getElementById("button5");
+           let question5 = document.getElementById("question5");
+   
+           button5.onclick = function(){
+           if(this.textContent.includes("View Answer")){
+               this.textContent = "Back to Question"
+               question5.innerHTML = "cannot be solved"
+           
+           }else{
+               this.textContent = " View Answer"
+               question5.innerHTML = "What is the value of any number divided by zero?"
+           }
+       }
+      </script> 
 </body>
 </html> 
