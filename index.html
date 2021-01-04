@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Money Converter</title>
+</head>
+<body>
+    <div class="info">
+        <nav>
+            <a href="#">About Us</a>
+            <a href="#">Dark Mode</a>
+            <a href="#">Light Mode</a>
+        </nav>
+    </div>  
+    <div class="container">
+        <div class="header">
+            <header>
+                <h1>MONEY CONVERTER</h1>
+            </header>
+        </div>
+        <div class="input-area">
+            <input type="number" placeholder="Base Unit is in cedis" name="currency" id="currency">
+        </div>
+        <div class="converter">
+            <div class="convertedValue">
+                <button class="btn btn-outline-info">USD 0</button>
+            </div>
+            <div class="convertedValue">
+                <button class="btn btn-outline-primary"> Naira 0</button>
+            </div>
+            <div class="convertedValue">
+                <button class="btn btn-outline-warning">Yen 0</button>
+            </div>
+            <div class="convertedValue">
+                <button class="btn btn-outline-success">CFA 0</button>
+            </div class="reset">
+            <div>
+                <button class="btn btn-danger" type="reset">Clear</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
